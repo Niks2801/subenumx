@@ -1,0 +1,24 @@
+That message means your system couldn’t get results from crt.sh at that time (slow/rate-limited/blocked), so the tool correctly fell back to only the root domain.
+
+✅ I fixed it so you still get subdomains even if crt.sh fails
+I added multiple passive sources (not only crt.sh) and fixed a “hanging” issue so slow sources won’t freeze the whole run.
+
+Now you’ll see which sources worked, like this:
+
+hackertarget: 51
+rapiddns: 84
+crtsh: 0 (down/blocked)
+bufferover: 0 (down/blocked)
+Run this (works better on slow networks)
+
+cd /home/niks_2801/subenumx
+source .venv/bin/activate
+
+python -m subenumx -d tesla.com --timeout 8 --crt-retries 0
+
+Save everything to files
+
+python -m subenumx -d tesla.com --timeout 8 --crt-retries 0 --resolve --probe --out-dir results_tesla
+
+
+If you still get 0 from every source, that usually means your network/DNS/firewall is blocking those OSINT sites (not a bug in your code).

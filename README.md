@@ -19,7 +19,7 @@ Subdomain enumeration is a core step in reconnaissance (recon) because:
 - **Misconfiguration detection**: forgotten staging sites, outdated apps, debug endpoints, or exposed admin panels often live on subdomains.
 - **Asset inventory**: security teams need a list of public-facing assets to monitor and protect.
 
-### Passive vs active enumeration (important concept)
+### Passive vs active enumeration
 
 There are two major approaches:
 
